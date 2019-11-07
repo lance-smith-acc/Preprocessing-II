@@ -1,5 +1,15 @@
 // Mixins in here
 
+.mobileView(@width,@flexDir, @justifyCon) {
+    @media(@mobile) {
+        width:@width;
+        display:flex;
+        flex-direction: @flexDir;
+        //justify-content: @justifyCon;
+        align-items: @justifyCon;
+    }
+}
+
 .signupBtn() {
     width:80%;
     margin:0 auto;
