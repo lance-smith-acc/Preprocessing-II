@@ -1,12 +1,16 @@
 .home {
-
+    
   .content-section {
-    margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    margin-bottom:3%;
    
+    div.welcome-content {
+      margin-bottom: 5%;
+      padding-bottom: 2%;
+      border-bottom: 2px dashed @silver;
+    }
     
     .text-content {
       width: 48%;
@@ -45,6 +49,8 @@
     img {
       border-radius: 10px;
     }
+
+
   }
 
   .content-pick {
@@ -52,10 +58,17 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    
     .destination {
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
       width: 30%;
       margin-bottom: 30px;
+    }
+    .btn {
+
+      .signupBtn();
     }
   }
 }// home
