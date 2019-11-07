@@ -1,1 +1,26 @@
 // Mixins in here
+
+.mobileView(@width,@flexDir, @justifyCon) {
+    @media(@mobile) {
+        width:@width;
+        display:flex;
+        flex-direction: @flexDir;
+        //justify-content: @justifyCon;
+        align-items: @justifyCon;
+    }
+}
+
+.signupBtn() {
+    width:80%;
+    margin:0 auto;
+    margin-top:2%;
+    text-align:center;
+    padding:5% 15% 5%;
+    background-color: @button-bg;
+    border-radius: 15px;
+    
+    a {
+        color:@white;
+        font-size: 1.5rem;
+    }
+}

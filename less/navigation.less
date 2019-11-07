@@ -1,1 +1,24 @@
 // Navigation Styles here
+
+header {
+        border-bottom: 2px dashed @silver;
+        
+    }
+    
+.navBar {
+    width:800px;
+    margin:0 auto;
+    margin-top:1%;
+    margin-bottom:1%;
+    display:flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    .mobileView(90%, column, 0);
+    nav {
+        width:40%;
+        display:flex;
+        justify-content: space-around;
+        .mobileView(100%, row, space-around);
+    }
+}

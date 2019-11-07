@@ -1,22 +1,30 @@
 .home {
-
+    
   .content-section {
-    margin: 30px 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-
+    margin-bottom:3%;
    
+    div.welcome-content {
+      margin-bottom: 5%;
+      padding-bottom: 2%;
+      border-bottom: 2px dashed @silver;
+      .mobileView(100%, column, 0);
+    }
     
     .text-content {
       width: 48%;
       padding-right: 1%;
+      .mobileView(100%, column, 0);
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
-
+       @media(@mobile) {
+        width:100%;
+      }
       img {
         border-radius: 10px;
       }
@@ -26,6 +34,7 @@
   .inverse-content {
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
+    .mobileView(100%, column-reverse, center);
 
     .text-content {
       padding-left: 1%;
@@ -35,16 +44,21 @@
     .img-content {
       padding-right: 1%;
       padding-left: 0;
+      @media(@mobile) {
+        width:100%;
+      }
     }
   }
 
   .content-destination {
     width: 75%;
     margin: 0 auto 30px;
-
+    .mobileView(90%, column, 0);
     img {
       border-radius: 10px;
     }
+
+
   }
 
   .content-pick {
@@ -52,10 +66,18 @@
     border-top: 2px dashed @navigation-border;
     display: flex;
     justify-content: space-between;
-
+    .mobileView(100%, column, center);
     .destination {
+      display:flex;
+      flex-direction: column;
+      justify-content: space-between;
       width: 30%;
       margin-bottom: 30px;
+      .mobileView(80%, column, 0);
+    }
+    .btn {
+      .mobileView(100%,column, center);
+      .signupBtn();
     }
   }
 }// home
